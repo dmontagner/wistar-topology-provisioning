@@ -1,0 +1,106 @@
+igp: ospf # ospf or isis
+ibgp_asn: 65000 # internal iBGP
+routers:
+    pe1:
+        role: pe           # p, pe, rr, ce
+        interfaces:
+            lo0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+            ge-0/0/0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+    p1:
+        role: pe           # p, pe, rr, ce
+        interfaces:
+            lo0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+            ge-0/0/0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+    p2:
+        role: pe           # p, pe, rr, ce
+        interfaces:
+            lo0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+            ge-0/0/0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+    p3:
+        role: pe           # p, pe, rr, ce
+        interfaces:
+            lo0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+            ge-0/0/0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+    p4:
+        role: pe           # p, pe, rr, ce
+        interfaces:
+            lo0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+            ge-0/0/0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+    pe2:
+        role: pe           # p, pe, rr, ce
+        interfaces:
+            lo0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+            ge-0/0/0:
+                area:      # isis or ospf area
+                level:     # isis level. if ospf, then set to None
+                passive:   # isis or ospf passive interface True or False
+                address:   # cidr of the interface
+                mpls:      # enable mpls on interface - True or False
+                remote:    # remote node:interface where this interface connect. If lo0, set to None. Informational only
+

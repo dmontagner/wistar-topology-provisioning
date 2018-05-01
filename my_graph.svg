@@ -1,0 +1,22 @@
+graph {
+	pe1_child
+	p1_child
+	p2_child
+	p3_child
+	p4_child
+	pe2_child
+	left1
+	right1
+	left1 -- pe1_child
+	pe1_child -- p2_child
+	pe1_child -- p1_child
+	p2_child -- p3_child
+	p1_child -- p4_child
+	p2_child -- p4_child
+	p1_child -- p3_child
+	p3_child -- pe2_child
+	p4_child -- pe2_child
+	pe2_child -- right1
+	p2_child -- p1_child
+	p3_child -- p4_child
+}

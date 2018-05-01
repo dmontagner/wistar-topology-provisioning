@@ -1,0 +1,191 @@
+ibgp_asn: 65000
+igp: ospf
+routers:
+  left1:
+    interfaces:
+      ens4:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: pe1_child:ge-0/0/0
+    role: pe
+  p1_child:
+    interfaces:
+      ge-0/0/0:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+      ge-0/0/1:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p4_child:ge-0/0/0
+      ge-0/0/2:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p3_child:ge-0/0/1
+      ge-0/0/3:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p1_child:ge-0/0/3
+    role: pe
+  p2_child:
+    interfaces:
+      ge-0/0/0:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+      ge-0/0/1:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p3_child:ge-0/0/0
+      ge-0/0/2:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p4_child:ge-0/0/1
+      ge-0/0/3:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p1_child:ge-0/0/3
+    role: pe
+  p3_child:
+    interfaces:
+      ge-0/0/0:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+      ge-0/0/1:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p3_child:ge-0/0/0
+      ge-0/0/2:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: pe2_child:ge-0/0/0
+      ge-0/0/3:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p4_child:ge-0/0/3
+    role: pe
+  p4_child:
+    interfaces:
+      ge-0/0/0:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+      ge-0/0/1:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p4_child:ge-0/0/0
+      ge-0/0/2:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: pe2_child:ge-0/0/1
+      ge-0/0/3:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p4_child:ge-0/0/3
+    role: pe
+  pe1_child:
+    interfaces:
+      ens4:
+        remote: pe1_child:ge-0/0/0
+      ge-0/0/0:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+      ge-0/0/1:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p2_child:ge-0/0/0
+      ge-0/0/2:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: p1_child:ge-0/0/0
+    role: pe
+  pe2_child:
+    interfaces:
+      ge-0/0/0:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+      ge-0/0/1:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+      ge-0/0/2:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+        remote: right1:ens4
+    role: pe
+  right1:
+    interfaces:
+      ens4:
+        address: ''
+        area: 0.0.0.0
+        level: 2
+        mpls: true
+        passive: false
+      ge-0/0/2:
+        remote: right1:ens4
+    role: pe
